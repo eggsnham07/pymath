@@ -6,7 +6,7 @@ count = 0
 into = 1
 
 for arg in sys.argv:
-    if not re.search("py", arg):
+    if not re.search("py", arg) and not re.search("mult", arg):
         into *= float(int(arg))
 
 if isinstance(into, float):

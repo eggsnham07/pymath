@@ -1,10 +1,10 @@
 #!/bin/bash
 if [[ "$1" == add* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/add.py $2 $3
+   /usr/bin/env python3 ~/.local/bin/pylib/add.py $@
 elif [[ "$1" == sub* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/sub.py $2 $3
+   /usr/bin/env python3 ~/.local/bin/pylib/sub.py $@
 elif [[ "$1" == div* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/div.py $2 $3
+   /usr/bin/env python3 ~/.local/bin/pylib/div.py $@
 elif [[ "$1" == mul* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/mult.py $2 $3
+   /usr/bin/env python3 ~/.local/bin/pylib/mult.py $@
 fi
