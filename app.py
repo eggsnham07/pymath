@@ -11,26 +11,20 @@ class App(tk.Frame):
         self.init_gui()
 
     def init_gui(self):
-        self.output = tk.Entry(self.master)
-        self.output.place(x=0,
-                y = 0,
-                width = 240,
-                height = 30)
-        self.output.configure(state='disabled')
+        self.output = tk.Label(self.master)
+        self.output.pack(side="top")
+        self.output["text"] = "Empty"
 
         self.calc = tk.Button(self.master)
         self.calc["text"] = "Calculate"
         self.calc["command"] = lambda:self.exec(self.en.get())
         self.calc.pack(side="bottom")
 
-        self.en = tk.Entry(self.master, width=240)
+        self.en = tk.Entry(self.master, width=30)
         self.en.pack(side="bottom")
 
     def outp(self, string):
-        self.output.configure(state='normal')
-        self.output.delete(0, "end")
-        self.output.insert(0, str(string))
-        self.output.configure(state="disabled")
+        self.output["text"] = string
 
     def exec(self, string):
         args = string.split(" ")
@@ -111,6 +105,7 @@ for arg in sys.argv:
 if arg_len == 2 and sys.argv[arg_len-1] == "gui":
     root = tk.Tk()
     root.geometry("240x100")
+    root.title("PyMath")
     app = App(master=root)
     app.mainloop()
 else:

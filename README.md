@@ -1,5 +1,9 @@
 # PyMath
 
+- [Commands]("https://github.com/eggsnham07/pymath#commands")
+- [Syntax]("https://github.com/eggsnham07/pymath#syntax")
+- [Installation]("https://github.com/eggsnham07/pymath#installation")
+
 ### Commands:
 - `pymath`
 - - add: usage: `pymath add 12.5 12.5`
