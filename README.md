@@ -5,3 +5,4 @@ add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use the `pymath` command 
 
 ### Commands:
 - `pymath`
+- - add:
