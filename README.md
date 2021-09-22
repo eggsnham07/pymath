@@ -13,7 +13,8 @@
 The pymath command can multipy/divide/subract/add with only `mult*` or `div*` or `sub*` or `add*` replacing `*` with anything, for example: `pymath divydodad 144 12` and the output will be 12
 
 ### Installation
-##### Only compatible with linux at the time of writing!
+***Only*** compatible with **linux** at the time of writing!
+
 Run the command below:
 
 ```shell
