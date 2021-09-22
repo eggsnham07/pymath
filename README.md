@@ -1,8 +1,5 @@
 # PyMath
 
-### Usage:
-add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use the `pymath` command via cli
-
 ### Commands:
 - `pymath`
 - - add: usage: `pymath add 12.5 12.5`
@@ -12,3 +9,14 @@ add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use the `pymath` command 
 
 ### Syntax:
 The pymath command can multipy/divide/subract/add with only mult\*/div\*/sub\*/add\* replacing \* with anything, for example: `pymath divy 144 12` and the output will be 12
+
+### Installation
+Run the command below:
+
+```shell
+cd ~/.local
+mkdir bin
+git clone https://github.com/eggsnham07/pymath.git bin
+```
+
+Add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use `pymath` command via cli
