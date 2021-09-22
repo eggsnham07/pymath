@@ -6,9 +6,11 @@
 - - sub: usage: `pymath sub 25 12.5`
 - - div: usage: `pymath div 144 12`
 - - mult: usage: `pymath mult 12 12`
+- - sqr: usage: `pymath sqr 49`
+- - gui: usage: `pymath gui`
 
 ### Syntax:
-The pymath command can multipy/divide/subract/add with only mult\*/div\*/sub\*/add\* replacing \* with anything, for example: `pymath divy 144 12` and the output will be 12
+The pymath command can multipy/divide/subract/add with only `mult*/div*/sub*/add*` replacing `*` with anything, for example: `pymath divydodad 144 12` and the output will be 12
 
 ### Installation
 Run the command below:
