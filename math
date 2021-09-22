@@ -7,4 +7,6 @@ elif [[ "$1" == div* ]]; then
    /usr/bin/env python3 ~/.local/bin/pylib/div.py $@
 elif [[ "$1" == mul* ]]; then
    /usr/bin/env python3 ~/.local/bin/pylib/mult.py $@
+elif [[ "$1" == sqr* ]]; then
+   /usr/bin/env python3 ~/.local/bin/pylib/sqrt.py $@
 fi
