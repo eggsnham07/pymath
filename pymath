@@ -1,16 +1,16 @@
 #!/bin/bash
 if [[ "$1" == add* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/add.py $@
+   /usr/bin/env python3 ~/.local/bin/pymath/pylib/add.py $@
 elif [[ "$1" == sub* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/sub.py $@
+   /usr/bin/env python3 ~/.local/bin/pymath/pylib/sub.py $@
 elif [[ "$1" == div* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/div.py $@
+   /usr/bin/env python3 ~/.local/bin/pymath/pylib/div.py $@
 elif [[ "$1" == mul* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/mult.py $@
+   /usr/bin/env python3 ~/.local/bin/pymath/pylib/mult.py $@
 elif [[ "$1" == sqr* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pylib/sqrt.py $@
+   /usr/bin/env python3 ~/.local/bin/pymath/pylib/sqrt.py $@
 elif [[ "$1" == gui* ]]; then
-   /usr/bin/env python3 ~/.local/bin/app.py gui
+   /usr/bin/env python3 ~/.local/bin/pymath/app.py gui
 else
    echo "Invalid operation"
 fi
