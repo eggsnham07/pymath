@@ -22,9 +22,11 @@ The pymath command can multipy/divide/subract/add with only `mult*` or `div*` or
 Run the command below:
 
 ```shell
-cd ~/.local
-mkdir bin
-git clone https://github.com/eggsnham07/pymath.git bin
+cd ~/Downloads
+git clone https://github.com/eggsnham07/pymath
+cd pymath
+chmod +x ./setup.sh
+./setup.sh
 ```
 
 Add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use `pymath` command via cli
