@@ -29,4 +29,4 @@ chmod +x ./setup.sh
 ./setup.sh
 ```
 
-Add `export PATH=$PATH:~/.local/bin` to `~/.bashrc` to use `pymath` command via cli
+Add `export PATH=$PATH:~/.local/bin/pymath` to `~/.bashrc` to use `pymath` command via cli
