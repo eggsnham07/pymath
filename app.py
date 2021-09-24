@@ -2,7 +2,7 @@
 import tkinter as tk
 import os, re, math, sys
 from pathlib import Path
-import add, mult, div, sub, sqrt
+from pylib.gui import Math
 
 print(sqrt.Sqrt().get())
 
@@ -41,7 +41,8 @@ class App(tk.Frame):
                     if isinstance(s, float):
                         equ += s
             print(equ)
-            self.outp(equ)
+            #self.outp(equ)
+            self.outp(Math.add([1,55]))
 
         elif re.search("mult", args[0]):
             print("Multiply mode")
