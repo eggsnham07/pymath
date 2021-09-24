@@ -1,16 +1,26 @@
 #!/bin/bash
+if [ "$PYMODE" == "DEV" ]; then
+   if [ -d "/workspace/pymath" ]; then
+      PYMATHLIB=/workspace/pymath
+   else
+      PYMATHLIB=/home/$USER/Documents/Python/pymath
+   fi
+else
+   PYMATHLIB=/home/$USER/.local/bin/pymath
+fi
+
 if [[ "$1" == add* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/pylib/add.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/add.py $@
 elif [[ "$1" == sub* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/pylib/sub.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/sub.py $@
 elif [[ "$1" == div* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/pylib/div.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/div.py $@
 elif [[ "$1" == mul* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/pylib/mult.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/mult.py $@
 elif [[ "$1" == sqr* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/pylib/sqrt.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/sqrt.py $@
 elif [[ "$1" == gui* ]]; then
-   /usr/bin/env python3 ~/.local/bin/pymath/app.py gui
+   /usr/bin/env python3 $PYMATHLIB/app.py gui
 else
    echo "Invalid operation"
 fi
