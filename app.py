@@ -2,6 +2,9 @@
 import tkinter as tk
 import os, re, math, sys
 from pathlib import Path
+import add, mult, div, sub, sqrt
+
+print(sqrt.Sqrt().get())
 
 class App(tk.Frame):
     def __init__(self, master=None):
