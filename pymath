@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$PYMODE" == "DEV" ]; then
+if [ "$PYMATHMODE" == "DEV" ]; then
    if [ -d "/workspace/pymath" ]; then
       PYMATHLIB=/workspace/pymath
    else
@@ -10,15 +10,15 @@ else
 fi
 
 if [[ "$1" == add* ]]; then
-   /usr/bin/env python3 $PYMATHLIB/pylib/add.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
 elif [[ "$1" == sub* ]]; then
-   /usr/bin/env python3 $PYMATHLIB/pylib/sub.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
 elif [[ "$1" == div* ]]; then
-   /usr/bin/env python3 $PYMATHLIB/pylib/div.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
 elif [[ "$1" == mul* ]]; then
-   /usr/bin/env python3 $PYMATHLIB/pylib/mult.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
 elif [[ "$1" == sqr* ]]; then
-   /usr/bin/env python3 $PYMATHLIB/pylib/sqrt.py $@
+   /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
 elif [[ "$1" == gui* ]]; then
    /usr/bin/env python3 $PYMATHLIB/app.py gui
 else
