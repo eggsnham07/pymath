@@ -14,7 +14,7 @@ class Math:
                 exit(1)
                     
 
-        if isinstance(into, int):
+        if isinstance(into, int) or isinstance(into, float):
             return(round(float(int(into))))
         else:
             print("One of the arguments are invalid!")
@@ -33,7 +33,7 @@ class Math:
                 print("[ERROR]: Argument must be an integer/float!")
                 exit(1) 
 
-        if isinstance(into, float):
+        if isinstance(into, float) or isinstance(into, int):
             return(round(into))
         else:
             print("One of the arguments are invalid")
@@ -71,7 +71,7 @@ class Math:
                 print("[ERROR]: Argument must be an integer/float!")
                 exit(1)
 
-        if isinstance(into, float):
+        if isinstance(into, float) or isinstance(into, int):
             return(round(into))
         else:
             print("One of the arguments are invalid!")
