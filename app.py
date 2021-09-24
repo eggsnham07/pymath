@@ -4,8 +4,6 @@ import os, re, math, sys
 from pathlib import Path
 from pylib.gui import Math
 
-print(sqrt.Sqrt().get())
-
 class App(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -32,6 +30,7 @@ class App(tk.Frame):
     def exec(self, string):
         args = string.split(" ")
         equ = 0
+        calc = []
         if re.search("add", args[0]):
             print("Addition mode")
             for s in args:
@@ -39,10 +38,10 @@ class App(tk.Frame):
                     if re.search(".", s): s = float(s)
                     else: s = float(int(s))
                     if isinstance(s, float):
-                        equ += s
-            print(equ)
+                        calc.append(s)
             #self.outp(equ)
-            self.outp(Math.add([1,55]))
+            print(Math.add(calc))
+            self.outp(Math.add(calc))
 
         elif re.search("mult", args[0]):
             print("Multiply mode")
@@ -51,13 +50,9 @@ class App(tk.Frame):
                 if not re.search("mult", s):
                     if re.search(".", s): s = float(s)
                     else: s = float(int(s))
-                    if isinstance(s, float):
-                        if count == 1:
-                            count += 1
-                            equ = 1
-                        equ *= s
-            print(equ)
-            self.outp(equ) 
+                    calc.append(s)
+            print(Math.mult(calc))
+            self.outp(Math.mult(calc))
 
         elif re.search("sub", args[0]):
             print("Subtraction mode")
@@ -66,14 +61,9 @@ class App(tk.Frame):
                 if not re.search("sub", s):
                     if re.search(".", s): s = float(s)
                     else: s = float(int(s))
-                    if isinstance(s, float):
-                        if count == 1:
-                            count += 1
-                            equ = s
-                        else:
-                            equ -= s
-            print(equ)
-            self.outp(equ) 
+                    calc.append(s)
+            print(Math.sub(calc))
+            self.outp(Math.sub(calc)) 
 
         elif re.search("div", args[0]):
             print("Division mode")
@@ -82,24 +72,17 @@ class App(tk.Frame):
                 if not re.search("div", s):
                     if re.search(".", s): s = float(s)
                     else: s = float(int(s))
-                    if isinstance(s, float):
-                        if count == 1:
-                            count += 1
-                            equ = s
-                        else:
-                            equ /= s
-
-            print(equ)
-            self.outp(equ)
+                    calc.append(s)
+            print(Math.sub(calc))
+            self.outp(Math.div(calc))
         
         elif re.search("sqr", args[0]):
             print("Square root mode")
             if re.search(".", args[1]): s = float(args[1])
             else: s = float(int(args[1]))
-            equ = math.sqrt(s)
 
-            print(equ)
-            self.outp(equ)
+            print(Math.sqrt(s))
+            self.outp(Math.sqrt(s))
 
 arg_len = 0
 
