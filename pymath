@@ -23,4 +23,13 @@ elif [[ "$1" == gui* ]]; then
    /usr/bin/env python3 $PYMATHLIB/app.py gui
 else
    echo "Invalid operation"
+   echo ""
+   echo "Usage: pymath <OPERATION> [int1, int2, int3]"
+   echo ""
+   echo "   mult*: multiply"
+   echo "   div*: divide"
+   echo "   sub*: subtract"
+   echo "   add*: addition"
+   echo "   sqr*: square root"
+   echo "   gui*: GUI interface"
 fi
