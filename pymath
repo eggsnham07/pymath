@@ -36,11 +36,4 @@ else
    echo "   sqr*: square root"
    echo "   gui*: GUI interface"
    echo ""
-
-   if [ "$HASH        HEAD" == "$(git ls-remote https://github.com/eggsnham07/pymath.git HEAD)" ]; then
-      echo "There may be a newer version of pymath!"
-      echo ""
-      echo "$HASH        HEAD"
-      echo "$(git ls-remote https://github.com/eggsnham07/pymath.git HEAD)"
-   fi
 fi
