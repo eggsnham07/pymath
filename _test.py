@@ -1,6 +1,7 @@
-from pylib.cli import Math
+from pylib.gui import Math
 
-Math.add([1, 2])
-Math.div([12, 3])
-Math.sub([3, 1])
-Math.sqrt()
+print((Math.add([1, 2])))
+print(Math.sub([3, 2]))
+print(Math.mult([1.5, 1.5]))
+print(Math.div([3, 2]))
+print(Math.sqrt(49))

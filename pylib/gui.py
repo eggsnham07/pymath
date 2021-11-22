@@ -15,7 +15,7 @@ class Math:
                     
 
         if isinstance(into, int) or isinstance(into, float):
-            return(round(float(int(into))))
+            return(float(int(into)))
         else:
             print("One of the arguments are invalid!")
     def sub(argv):
@@ -34,7 +34,7 @@ class Math:
                 exit(1) 
 
         if isinstance(into, float) or isinstance(into, int):
-            return(round(into))
+            return(into)
         else:
             print("One of the arguments are invalid")
 
@@ -56,7 +56,7 @@ class Math:
                 exit(1)
 
         if isinstance(into, float) and isinstance(intt, float):
-            return(round(into / intt))
+            return(into / intt)
         else:
             print("One of the arguments are invalid!")
 
@@ -72,7 +72,7 @@ class Math:
                 exit(1)
 
         if isinstance(into, float) or isinstance(into, int):
-            return(round(into))
+            return(into)
         else:
             print("One of the arguments are invalid!")
 
