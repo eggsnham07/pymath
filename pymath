@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ "$PYMATHMODE" == "DEV" ]; then
    if [ -d "/workspace/pymath" ]; then
       PYMATHLIB=/workspace/pymath
@@ -8,6 +9,8 @@ if [ "$PYMATHMODE" == "DEV" ]; then
 else
    PYMATHLIB=/home/$USER/.local/bin/pymath
 fi
+
+HASH=$(cat "$PYMATHLIB/version.txt")
 
 if [[ "$1" == add* ]]; then
    /usr/bin/env python3 $PYMATHLIB/pylib/cli.py $@
@@ -32,4 +35,12 @@ else
    echo "   add*: addition"
    echo "   sqr*: square root"
    echo "   gui*: GUI interface"
+   echo ""
+
+   if [ "$HASH        HEAD" == "$(git ls-remote https://github.com/eggsnham07/pymath.git HEAD)" ]; then
+      echo "There may be a newer version of pymath!"
+      echo ""
+      echo "$HASH        HEAD"
+      echo "$(git ls-remote https://github.com/eggsnham07/pymath.git HEAD)"
+   fi
 fi
